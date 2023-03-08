@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <style>
+        .radio {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <table style="background-color: aliceblue; color: aliceblue">
+        <tr style="background-color: crimson">
+            <th colspan="2">SỞ THÍCH CỦA BẠN</th>
+        </tr>
+        <tr>
+            <td class="radio">Họ và tên</td>
+            <td><input type="text" name="yourname"></td>
+        </tr>
+        <tr>
+            <td class="radio">Email</td>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <td class="radio">Sở thích</td>
+            <td style="color: crimson">
+                <input type="checkbox" name="hobby" value="thethao">thể thao
+                <input type="checkbox" name="hobby" value="amnhac">âm nhạc
+                <input type="checkbox" name="hobby" value="docsach">đọc sách
+                <br>
+                <input type="checkbox" name="hobby" value="luotweb">lướt web
+                <input type="checkbox" name="hobby" value="choigame">chơi game
+                <input type="checkbox" name="hobby" value="dienanh">điện ảnh
+                <br>
+                <input type="checkbox" name="hobby" value="dulich">du lịch
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="button" value="submit">gửi thông tin</button>
+                <input type="reset" value="nhập lại">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
