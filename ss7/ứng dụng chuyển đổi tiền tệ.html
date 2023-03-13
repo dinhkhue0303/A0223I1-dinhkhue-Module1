@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="text" id="text" value="">
+            </td>
+            <td>
+                <select id="FCurrency" onchange="change()">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="TCurrency" onchange="change1()">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="convert()">convert</button>
+            </td>
+        </tr>
+
+
+    </table>
+    <div id="result"></div>
+    <script>
+        let a;
+        let b;
+        let c;
+        b=document.getElementById("FCurrency").value;
+        c=document.getElementById("TCurrency").value;
+        function convert(){
+            a=document.getElementById("text").value;
+            // if(document.getElementById("FCurrency").value==document.getElementById("TCurrency").value&&document.getElementById("TCurrency").value=="VND"){
+            //     document.getElementById("result").innerHTML="Result : "+a+" VND";
+            // }else if(document.getElementById("FCurrency").value==document.getElementById("TCurrency").value&&document.getElementById("TCurrency").value=="USD"){
+            //     document.getElementById("result").innerHTML="Result : "+a+" USD";
+            // }else if(document.getElementById("FCurrency").value=="VND"){
+            //     document.getElementById("result").innerHTML="Result : "+(a/23000)+" USD";
+            // }else if(document.getElementById("FCurrency").value=="USD"){
+            //     document.getElementById("result").innerHTML="Result : "+(a*23000)+" VND";
+            // }
+            if(b==c && c=="VND"){
+                document.getElementById("result").innerHTML="Result : "+a+" VND";
+            }else if(b==c && c=="USD"){
+                document.getElementById("result").innerHTML="Result : "+a+" USD";
+            }else if(b=="VND"){
+                document.getElementById("result").innerHTML="Result : "+(a/23000)+" USD";
+            }else if(b=="USD"){
+                document.getElementById("result").innerHTML="Result : "+(a*23000)+" VND";
+            }
+        }
+        function change(){
+            b=document.getElementById("FCurrency").value;
+        }
+        function change1(){
+            c=document.getElementById("TCurrency").value;
+        }
+    </script>
+</form>
+</body>
+</html>
