@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+  let ktr=parseInt(prompt("nhập điểm kiểm tra"));
+  let giuaki=parseInt(prompt("nhập điểm giữa kì"));
+  let cuoiki=parseInt(prompt("nhập điểm cuối kì"));
+  let tong=ktr*(20/100)+giuaki*(30/100)+cuoiki*(50/100);
+  if(tong<3){
+      alert("học lực yếu");
+  }else if(tong<6){
+      alert("học lực trung bình");
+  }else if(tong<8){
+      alert("học lực khá");
+  }else {
+      alert("học lực giỏi");
+  }
+</script>
+</body>
+</html>
