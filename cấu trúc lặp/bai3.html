@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+
+</body>
+<script>
+    var f1 = 0, f2 = 1, f3;
+    for (var i = 1; i <= 20; i++) {
+        if (i == 1) {
+            document.write("0" + "<br>");
+        } else if (i == 2) {
+            document.write("1" + "<br>");
+        } else {
+            f3 = f1 + f2;
+            document.write(f3 + "<br>");
+            f1 = f2;
+            f2 = f3;
+        }
+    }
+</script>
+</html>
