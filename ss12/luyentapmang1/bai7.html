@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a = [0, 2, 3, 5, 4];
+    var b = 2;
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] == b) {
+            for (var j = i; j < a.length - 1; j++) {
+                a[j] = a[j + 1];
+            }
+            a.length--;
+        }
+    }
+    document.write(a);
+</script>
+</html>

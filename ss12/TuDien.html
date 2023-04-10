@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a = ["hello", "bye", "name", "class", "love"];
+    var b = ["chào", "bai", "tên", "lớp", "iu"];
+    var c = prompt("nhap tu tieng anh:");
+    var s = 0;
+    for (var i = 0; i < a.length; i++) {
+        if (c != a[i]) {
+            s = 1;
+        } else {
+            alert(b[i]);
+            s = 0;
+            break;
+        }
+    }
+    if (s == 1) {
+        alert("chịu");
+    }
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a = prompt("nhap chuoi:");
+    var c = [];
+    for (var i = 0; i < a.length; i++) {
+        var b = a.charAt(i);
+        if (b == b.toUpperCase()) {
+            c.push(b.toLowerCase());
+        } else if (b == b.toLowerCase()) {
+            c.push(b.toUpperCase());
+        }
+    }
+    document.write(c.join(""));
+</script>
+</html>
