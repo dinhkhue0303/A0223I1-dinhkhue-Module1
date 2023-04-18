@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhap so dau");
+    let b = prompt("nhap so sau");
+
+    function doi(a, b) {
+        var tam = a;
+        a = b;
+        b = tam;
+        document.write("so dau:" + a + "<br>");
+        document.write("so sau:" + b);
+    }
+
+    doi(a, b);
+    document.write("so dau:" + a + "<br>");
+    document.write("so sau:" + b+"<br>");
+</script>
+</body>
+</html>

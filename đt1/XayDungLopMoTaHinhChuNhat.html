@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<input id="length" type="text" oninput="nhap()">Length<br><br>
+<input id="width" type="text" oninput="nhap()">Width<br><br>
+<!--<button id="buton" onclick="nhap()">nhap</button>-->
+<h5 id="perimeter"></h5>
+<h5 id="area"></h5>
+<canvas id="myCanvas" width="1000px" height="1000px" style="border:1px solid #d3d3d3;"></canvas>
+</body>
+</html>
+<script>
+    let MyRectangle = function (length, width) {
+        this.length = length;
+        this.width = width;
+        this.getlength = function () {
+            return this.length;
+        }
+        this.getwidth = function () {
+            return this.width;
+        }
+        this.perimeter = function () {
+            return (this.length + this.width) * 2;
+        }
+        this.area = function () {
+            return this.length * this.width;
+        }
+    };
+
+    function nhap() {
+        var a = document.getElementById("myCanvas");
+        var ctx = a.getContext("2d");
+        ctx.clearRect(0, 0, 1000, 1000);
+        let length = parseInt(document.getElementById("length").value);
+        let width = parseInt(document.getElementById("width").value);
+        let rectangle = new MyRectangle(length, width);
+        document.getElementById("perimeter").innerHTML = "Chu vi = " + (rectangle.perimeter());
+        document.getElementById("area").innerHTML = "Dien tich = " + rectangle.area();
+        ctx.strokeRect(0, 0, length, width);
+    }
+
+</script>

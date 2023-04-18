@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<script>
+    var a = ["a", "b", "c", "d", "e"];
+    var b = "b";
+
+    function ktr(a, b) {
+        var count = 0;
+        for (var i = 0; i < a.length; i++) {
+            if (a[i] == b) {
+                count++;
+            }
+        }
+        if (count == 0) {
+            return -1;
+        } else {
+            return count;
+        }
+    }
+
+    document.write("so lan xuat hien : " + ktr(a, b));
+</script>
+</body>
+</html>

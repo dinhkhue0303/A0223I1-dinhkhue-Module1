@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let a = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let b = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function chuoi(chuoi) {
+        let c = prompt("nhap ten ngoi sao:");
+        for (var i = 0; i < chuoi.length; i++) {
+            if (chuoi[i] == c) {
+                break;
+            }
+        }
+        for (var j = 0; j < b.length; j++) {
+            if (j == i) {
+                break;
+            }
+        }
+        alert('ten chom sao cua sao ' + chuoi[i] + " la: " + b[i]);
+    }
+
+    chuoi(a);
+</script>
+</body>
+</html>

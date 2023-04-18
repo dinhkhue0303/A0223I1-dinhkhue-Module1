@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<h4 id="f"></h4>
+<h4 id="ke"></h4>
+</body>
+</html>
+<script>
+    let MyTemperature = function (c) {
+        this.c = c;
+        this.convertTof = function () {
+            return this.c * 1.8 + 32;
+        }
+        this.convertTokevin = function () {
+            return this.c + 273.15;
+        }
+    }
+    let c = 25;
+    let temperature = new MyTemperature(c);
+    document.getElementById("f").innerHTML = "25 độ c sang f : " + temperature.convertTof();
+    document.getElementById("ke").innerHTML = "25 độ c sang kevin : " + temperature.convertTokevin();
+</script>

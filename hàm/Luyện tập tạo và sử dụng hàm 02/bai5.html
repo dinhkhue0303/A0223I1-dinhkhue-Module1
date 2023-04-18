@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let a = prompt("so thu nhat");
+    let b = prompt("so thu hai");
+    let c = prompt("so thu ba");
+
+    function ktr(a, b, c) {
+        if (a < b && a < c) {
+            return a;
+        } else if (b < a && b < c) {
+            return b;
+        } else if (c < b && c < a) {
+            return c;
+        }
+    }
+
+    document.write("so nho nhat :" + ktr(a, b, c));
+</script>
+</body>
+</html>
