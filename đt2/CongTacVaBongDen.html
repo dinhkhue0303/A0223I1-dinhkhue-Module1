@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng: công tắc và bóng đèn</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Swicthbutton {
+        constructor(status) {
+            this.status = status;
+            this.lamp = {};
+        }
+
+        Swicthbutton() {
+        }
+
+        connectToLamp(ElectricLamp) {
+            this.lamp = ElectricLamp;
+        }
+
+        swichOff() {
+            document.write("*tắt nút" + "<br>");
+            if (this.status) {
+                this.lamp.turnOff();
+                this.status = false;
+            } else {
+                document.write("nút đã đc tắt" + "<br>");
+            }
+        }
+
+        swichOn() {
+            document.write("*bật nút" + "<br>");
+            if (this.status) {
+                document.write("nút đã đc bật" + "<br>");
+            } else {
+                this.lamp.turnOn();
+                this.status = true;
+            }
+        }
+    }
+
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        ElectricLamp() {
+        }
+
+        turnOff() {
+            if (this.status) {
+                this.status = false;
+                document.write("hiển thị đèn tối" + "<br>");
+            }
+        }
+
+        turnOn() {
+            if (this.status) {
+            } else {
+                this.status = true;
+                document.write("hiển thị đèn sáng" + "<br>");
+            }
+        }
+    }
+
+
+    let electricLamp = new ElectricLamp(true);
+    let switchbutton = new Swicthbutton(true, electricLamp);
+    switchbutton.connectToLamp(electricLamp);
+    switchbutton.swichOn();
+    for (var i = 1; i <= 5; i++) {
+        switchbutton.swichOff();
+        switchbutton.swichOn();
+    }
+</script>
